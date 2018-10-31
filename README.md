@@ -18,7 +18,6 @@ dependencies:
 require "staticarrayheap"
 ```
 
-TODO: Write usage instructions here
 ```crystal
 q = StaticArrayHeap( Int32, 10 )
 
