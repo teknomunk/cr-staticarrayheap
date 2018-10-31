@@ -2,7 +2,7 @@ struct StaticArrayHeap(T,N)
 	VERSION = "0.1.0"
 
 	@data : StaticArray(T,N)
-	@size : Int32 = 0
+	getter size : Int32 = 0
 
 	def initialize()
 		@data = uninitialized StaticArray(T,N)

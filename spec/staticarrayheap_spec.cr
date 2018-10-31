@@ -12,6 +12,7 @@ describe StaticArrayHeap do
 			s = StaticArrayHeap(Int32,10).new
 			s.push(15)
 			s.empty?.should be_false
+			s.size.should eq(1)
 		end
 	end
 	describe "#full?" do
@@ -29,6 +30,7 @@ describe StaticArrayHeap do
 		it "returns the minimum element in the heap" do
 			s = StaticArrayHeap(Int32,3).new
 			[5,10,1].each {|i| s.push(i) }
+			s.size.should eq(3)
 			s.next.should eq(1)
 		end
 	end
@@ -36,6 +38,7 @@ describe StaticArrayHeap do
 		it "removes the minimum element in the heap" do
 			s = StaticArrayHeap(Int32,10).new
 			[5,10,1,3].each {|i| s.push(i) }
+			s.size.should eq(4)
 			s.next.should eq(1)
 			s.pop
 			s.next.should eq(3)
